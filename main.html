@@ -285,38 +285,38 @@ Youtube貼り付けここまで -->
       </div>
       <!-- STAGE3　ここまで -->
 
-      <!-- STAGE3　ここから -->
-      <div v-if="next['stage2']" id="sectionStage3" class="stage">
+      <!-- STAGE4　ここから -->
+      <div v-if="next['stage3']" id="sectionStage4" class="stage">
 
-        <!-- STAGE3-1問題セクション　ここから -->
+        <!-- STAGE4-1問題セクション　ここから -->
         <section class="section">
           <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>この平仮名の謎の答えは？</h2>
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：4</span>この平仮名の謎の答えは？</h2>
             <p class="text-center">ドアを開けると、そこには『最後の謎』と書かれた謎があったようだ。<br>
               寺島が三枚の写真を送ってきた。この三枚の写真をもとに謎を解こう！</p>
             <figure class="image__container">
-              <img src="assets/images/Nquestion4.png" alt="">
+              <img src="assets/images/Nquestion6.png" alt="ぽえ">
             </figure>
           </div>
         </section>
-        <!-- STAGE3-1問題セクション　ここまで -->
+        <!-- STAGE4-1問題セクション　ここまで -->
 
-        <!-- STAGE3-1解答入力セクションここから -->
+        <!-- STAGE4-1解答入力セクションここから -->
         <section class="section bg-color--keycolor">
           <div class="container">
-              <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>この平仮名の謎の答えは？</h2>
+              <h2 class="section-title"><span class="section-title__stage">STAGE：4</span>この平仮名の謎の答えは？</h2>
               <!-----------------------------------------------------------------------------------------------------------------
                 解答入力欄のコンポーネントです。
                 v-on:answer-input="answerInput($event, 'stage3', 1, 'final')" は送信ボタンをクリックした時の動作を決める関数です。
                 4番目の引数 'final' は最終ステージを表します。
               ------------------------------------------------------------------------------------------------------------------>
-              <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1, 'final')"></answer-input>
-            <a class="link-hint" href="hint3.html" target="hint3">ヒントをみる ></a>
+              <answer-input v-bind:correct="correctAnswer['stage4']['q1']" v-on:answer-input="answerInput($event, 'stage4', 1, 'final')"></answer-input>
+            <a class="link-hint" href="hint4.html" target="hint4">ヒントをみる ></a>
           </div>
         </section>
-      <!-- STAGE3-1解答入力セクション　ここまで -->
+      <!-- STAGE4-1解答入力セクション　ここまで -->
 
-<!-- STAGE2-2 を追加
+<!-- STAGE3-2 を追加
           <section class="section">
           <div class="container">
             <figure class="image__container">
