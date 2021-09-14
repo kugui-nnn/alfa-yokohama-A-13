@@ -191,6 +191,100 @@ Youtube貼り付けここまで -->
       </div>
       <!-- STAGE2　ここまで -->
 
+       <!-- STAGE3　ここから -->
+      <!---------------------------------------------------------------------
+        クリア画面の「次のステージへ」ボタンをクリックしたら表示します。
+        v-if="next['stage1']"はnext['stage1']がtrueになったら表示します。
+      ----------------------------------------------------------------------->
+      <div v-if="next['stage2']" id="sectionStage3" class="stage">
+        <section>
+          <div class="section">
+            <div class="container">
+              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>次の謎を解こう！</h2>
+              <p class="text-center">少しして寺島からまた写真が送られてきた。<br>
+                廊下を歩いていると謎と思わしきものが現れたという。<br>
+                これを解けば先へ進めるのかもしれない。</p>
+            </div>
+          </div>
+          <div class="stage-column__container section bg-color--keycolor">
+            <div class="container">
+              <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>キーワードを入力(ひらがな）</h2>
+              <!-------------------------------------------------------------
+                class名"row"内のclass名"column"が横並びになります。
+                改行する場合は以下のように追加してください。
+                <div class="row">
+                  <div class="column">
+                    ～ 内容 ～
+                  </div>
+                </div>
+              ------------------------------------------------------------->
+              <div class="row">
+
+                <!-- STAGE3-1　ここから -->
+                <div class="column">
+                  <!-- STAGE3-1問題セクション　ここから -->
+                  <figure class="image__container">
+                    <img src="assets/images/Nquestion4.png" alt="">
+                  </figure>
+                  <!-- STAGE3-1問題セクション　ここまで -->
+                  <!-- STAGE3-1解答入力セクション　ここから -->
+                  <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input>
+                  <a class="link-hint" href="hint3.html" target="hint3">ヒントをみる ></a>
+                  <!-- STAGE3-1解答入力セクション　ここまで -->
+                </div><!-- /.column -->
+                <!-- STAGE3-1　ここまで -->
+
+
+
+                <div class="column">
+
+                  <figure class="image__container">
+                    <img src="assets/images/Nquestion5.png" alt="">
+                  </figure>
+
+                  <answer-input v-bind:correct="correctAnswer['stage3']['q2']" v-on:answer-input="answerInput($event, 'stage3', 2)"></answer-input>
+                  <a class="link-hint" href="hint3.html" target="hint3">ヒントをみる></a>
+                　
+                </div>
+
+
+                  
+<!-- STAGE3-3 を追加
+
+                <div class="column">
+
+                  <figure class="image__container">
+                    <img src="assets/images/stage.png" alt="">
+                  </figure>
+
+                  <answer-input v-bind:correct="correctAnswer['stage2']['q3']" v-on:answer-input="answerInput($event, 'stage2', 3)"></answer-input>
+                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+
+                </div>
+
+3-3追加ここまで -->
+
+              </div><!-- /.row -->
+
+            </div>
+          </div>
+        </section>
+
+        <!-- STAGE3クリア画面　ここから -->
+        <section v-if="clear['stage3']" v-bind:class="{isClear:clear['stage3']}"  class="section section--clear bg-color--gray">
+          <div class="container">
+            <div class="clear-message">
+              <div class="clear-message__title">STAGE：3　クリア！</div>
+              <div class="clear-message__content">「合言葉…もしかして…」と寺島が良い、物音がするとドアの開く音が聞こえた。<br>
+                「小学生の頃の、ちょっとした合言葉なんだけどね」</div>
+                <button v-on:click="nextStage('stage3')" onclick="location.href='#sectionStage4'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+            </div>
+          </div>
+        </section>
+        <!-- STAGE3クリア画面　ここまで -->
+      </div>
+      <!-- STAGE3　ここまで -->
+
       <!-- STAGE3　ここから -->
       <div v-if="next['stage2']" id="sectionStage3" class="stage">
 
@@ -222,7 +316,7 @@ Youtube貼り付けここまで -->
         </section>
       <!-- STAGE3-1解答入力セクション　ここまで -->
 
-
+<!-- STAGE2-2 を追加
           <section class="section">
           <div class="container">
             <figure class="image__container">
@@ -237,8 +331,7 @@ Youtube貼り付けここまで -->
             <a class="link-hint" href="hint3.html" target="hint3">ヒントをみる ></a>
           </div>
         </section>
-      　　
-
+STAGE3-3追加　ここまで -->
           
 <!-- STAGE3-3問題セクション　を追加
         <section class="section">
