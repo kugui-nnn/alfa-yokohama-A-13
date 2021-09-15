@@ -32,6 +32,7 @@ const app = Vue.createApp({
         },
         stage4: {
           q1: 'きょうはなんのひ',
+          q1: 'きようはなんのひ',
         }
       },
 
